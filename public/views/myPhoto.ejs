@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>	
+	<head>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap-image-gallery.css"/>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/blueimp-gallery.min.css" >
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link rel="shortcut icon" href="images/thumbnails/deuan.jpg" type="image/jpg">
+		<title>Deuan Blair</title>
+		<link type="text/css" rel="stylesheet" href="css/myStyle.css"/>
+		<style type="text/css">
+		.img-thumbnail {
+		opacity: 1;
+		-webkit-transition: opacity;
+		-webkit-transition-timing-function: ease-out;
+		-webkit-transition-duration: 500ms;
+		}
+		.img-thumbnail:hover{
+		opacity: .5;
+		-webkit-transition: opacity;
+		-webkit-transition-timing-function: ease-out;
+		-webkit-transition-duration: 500ms;
+		}
+
+		</style>
+
+	</head>
+	<body bgcolor="#686868">	
+		<!--=====================================================Responsive NavBar=====================================================-->
+		
+		 <div class ="navbar navbar-inverse">
+		 	<div class="row-fluid">
+			 	<div class="col-md-4">
+				 	<div class="container"> 
+				 		<div class="navbar-header">
+				 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				 				<span class="icon-bar"></span>
+				 				<span class="icon-bar"></span>
+				 				<span class="icon-bar"></span>
+				 				<span class="icon-bar"></span>
+				 			</button>
+				 			<div class="pull-left">
+				 			<a href="/home"><img src="images/thumbnails/deuan.jpg" class="img-circle" alt="Circular Image"></a>
+				 			</div>
+				 			<a href="/home" class="navbar-brand">Deuan Blair</a>
+				 		</div>
+				 		<div class="navbar-collapse collapse">
+				 			<ul class="nav navbar-nav">
+				 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">My Family<b class="caret"></b></a>
+				 					<ul class="dropdown-menu">
+				 						<li><a href="/mama">My Mama</a></li>
+				 						<li><a href="/papa">My Papa</a></li>
+				 					</ul>
+				 				</li>
+				 				<li><a href="/myPhoto">My Photos</a></li>
+				 				<li><a href="/aboutMe">About Me</a></li>
+				 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">In case if I'm lost...<b class="caret"></b></a>
+				 					<ul class="dropdown-menu">
+				 						<li><a href="#">Mama's Contact #: 0933*******</a></li>
+				 						<li><a href="#">Papa's Contact #: 0935*******</a></li>
+				 					</ul>
+				 				</li>
+				 			</ul>
+				 			<ul class="nav navbar-nav navbar-right">
+						 		<li >	
+						 			<a  href="/">Logout | <span><%= user.local.username%></a>		 					
+						 		</li>
+						 	</ul>
+				 		</div><!--navbar-header-->
+				 	</div><!-- container of nav-->
+			 	</div>
+			</div>
+		 </div><!-- .navbar navbar-inverse-->
+		 <!--==========================Photo thumbnails==========================-->
+			<div class="container">
+				<form class="form-inline">
+			        <div class="form-group">
+			            <button id="image-gallery-button" type="button" class="btn btn-primary btn-lg">
+			                <i class="glyphicon glyphicon-picture"></i>
+			                Launch Image Gallery
+			            </button>
+			        </div>
+			        
+			    </form>
+				<br>
+   				 <!-- The container for the list of example images -->
+    			<div id="links">
+				    <a href="images/deuan.jpg" title="withmama" data-gallery class="img-thumbnail">
+				        <img src="images/thumbnails/deuan2.jpg" alt="Banana">
+				    </a>
+				    <a href="images/machodeuan.jpg" title="Apple" data-gallery class="img-thumbnail">
+				        <img src="images/thumbnails/machodeuan.jpg" alt="Apple">
+				    </a>
+				    <a href="images/chuponbaby.jpg" title="Orange" data-gallery class="img-thumbnail">
+				        <img src="images/thumbnails/chuponbaby.jpg" alt="Orange">
+				    </a>
+				    <a href="images/mama.jpg" title="Orange" data-gallery class="img-thumbnail">
+				        <img src="images/thumbnails/mama.jpg" alt="Orange">
+				    </a>
+				    <a href="images/withmama.jpg" title="Orange" data-gallery class="img-thumbnail ">
+				        <img src="images/thumbnails/withmama.jpg" alt="Orange">
+				    </a>
+				    <a href="images/withpapa.jpg" title="Orange" data-gallery class="img-thumbnail">
+				        <img src="images/thumbnails/withpapa.jpg" alt="Orange">
+				    </a>
+				    <a href="images/withma-pa.jpg" title="Orange" data-gallery class="img-thumbnail">
+				        <img src="images/thumbnails/withma-pa.jpg" alt="Orange">
+				    </a>
+				</div>
+    			<br>
+			</div>
+			<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+			<div id="blueimp-gallery" class="blueimp-gallery">
+			    <!-- The container for the modal slides -->
+			    <div class="slides"></div>
+			    <!-- Controls for the borderless lightbox -->
+			    <h3 class="title"></h3>
+			    <a class="prev">‹</a>
+			    <a class="next">›</a>
+			    <a class="close">×</a>
+			    <a class="play-pause"></a>
+			    <ol class="indicator"></ol>
+			    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+			    <div class="modal fade">
+			        <div class="modal-dialog">
+			            <div class="modal-content">
+			                <div class="modal-header">
+			                    <button type="button" class="close" aria-hidden="true">&times;</button>
+			                    <h4 class="modal-title"></h4>
+			                </div>
+			                <div class="modal-body next"></div>
+			                <div class="modal-footer">
+			                    <button type="button" class="btn btn-primary pull-left prev">
+			                        <i class="glyphicon glyphicon-chevron-left"></i>
+			                        Previous
+			                    </button>
+			                    <button type="button" class="btn btn-primary next" style="width: 115px;">
+			                        Next
+			                        <i class="glyphicon glyphicon-chevron-right"></i>
+			                    </button>
+			                    <br>
+			                    <div class="row" style="z-index:auto">
+			                    	<h4 class="pull-left">Add Comment</h4>
+				                	<div class="form-group">
+										<textarea class="form-control" style="z-index: 4;"></textarea>
+									</div>
+
+			                    </div>
+			                    
+			                </div>
+			                <hr/>
+			               
+			            </div>
+			        </div>
+			    </div>
+			</div>
+	<!--==========================font awesome==========================-->
+	
+	<br/><br/><br/>
+	<hr/>
+		<div class="container" >
+			<div class="row">
+				<div class="col-md-42" >
+					<div class="well" style="height:60px;">
+						
+					<a href="https://www.twitter.com" class="pull-right" style="position:relative;"><span class="fa-stack fa-lg pull-right" id="myFontAwesome">
+  					<i class="fa fa-square-o fa-stack-2x "></i>
+  					<i class="fa fa-twitter fa-stack-1x "></i>
+					</span></a>
+
+					<a href="https://facebook.com" class="pull-right" style="position:relative;"><span class="fa-stack fa-lg pull-right" id="myFontAwesome">
+  					<i class="fa fa-square-o fa-stack-2x "></i>
+  					<i class="fa fa-facebook fa-stack-1x "></i>
+					</span></a>
+					 
+					<a href="https://github.com" class="pull-right" ><span class="fa-stack fa-lg" id="myFontAwesome">
+  					<i class="fa fa-square-o fa-stack-2x "></i>
+  					<i class="fa fa-github fa-stack-1x "></i>
+					</span></a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--==================Footer and Modal=====================-->
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					
+					<p id="copyright">Copyright &copy; Coronel.
+						<a href="#myModal" data-toggle="modal" >Terms and Conditions</a>
+					</p> 
+					<div class="modal fade" id="myModal" tabinex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3>Terms and Conditions</h3>
+								</div>
+								<div class="modal-body">
+									<p>text goes here...</p>
+								</div>
+								<div class="modal-footer">
+									<button class="btn btn-primary" type="button" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!--=======================Javascripts=====================-->
+		<script src ="js/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src ="js/bootstrap.js"></script>
+		
+    	<script src="js/bootstrap.min.js"></script>
+    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- Bootstrap JS is not required, but included for the responsive demo navigation and button states -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+		<script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+		<script src="js/bootstrap-image-gallery.js"></script>
+		<script src="js/demo.js"></script>
+ 		<script type="text/javascript">
+
+
+		$(document).keydown( function(eventObject) {//Arrow keys for image slides
+     if(eventObject.which==37) {//left arrow
+        $('#myCarousel .left').click();//emulates click on prev button 
+     } else if(eventObject.which==39) {//right arrow
+        $('#myCarousel .right').click();//emulates click on next button
+     }
+} );
+
+		$(document).ready(function () {//carousel move it's own
+    $('.carousel').carousel({
+        interval: 2000
+    });
+ 	$('.carousel').carousel('cycle');
+});
+		$('.image-gallery-button').on('click',function(){
+    $('#commentTextarea').focus();
+});​
+		</script>
+	</body>
+</html>

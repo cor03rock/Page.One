@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>	
+	<head>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link rel="shortcut icon" href="images/thumbnails/deuan.jpg" type="image/jpg">
+		<title>Deuan Blair</title>
+
+		<link type="text/css" rel="stylesheet" href="css/myStyle.css"/>
+
+	</head>
+	<body bgcolor="#686868" >	
+		<!--=====================================================Responsive NavBar=====================================================-->
+		 <div class ="navbar navbar-inverse">
+		 	<div class="row-fluid">			
+		 		<div class="col-md-4">
+		 			<div class="container"> 
+				 		<div class="navbar-header">
+				 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				 				<span class="icon-bar"></span>
+				 				<span class="icon-bar"></span>
+				 				<span class="icon-bar"></span>
+				 				<span class="icon-bar"></span>
+				 			</button>
+				 			<div class="pull-left">
+				 			<a href="/home"><img src="images/thumbnails/deuan.jpg" class="img-circle" alt="Circular Image"></a>
+				 			</div>
+				 			<a href="/home" class="navbar-brand">Deuan Blair</a>
+				 		</div>
+				 		<div class="navbar-collapse collapse">
+				 			<ul class="nav navbar-nav">
+				 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">My Family<b class="caret"></b></a>
+				 					<ul class="dropdown-menu">
+				 						<li><a href="/mama">My Mama</a></li>
+				 						<li><a href="/papa">My Papa</a></li>
+				 					</ul>
+				 				</li>
+				 				<li><a href="/myPhoto">My Photos</a></li>
+				 				<li><a href="/aboutMe">About Me</a></li>
+				 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">In case if I'm lost...<b class="caret"></b></a>
+				 					<ul class="dropdown-menu">
+				 						<li><a href="#">Mama's Contact #: 0933*******</a></li>
+				 						<li><a href="#">Papa's Contact #: 0935*******</a></li>
+				 					</ul>
+				 				</li>
+				 			</ul>
+				 			<ul class="nav navbar-nav navbar-right">
+				 				<li >	
+				 					<a  href="/">Logout | <span><%= user.local.username%></span></a>	 					
+				 				</li>
+				 			
+				 			</ul>
+				 		</div><!--navbar-header-->
+				 	</div><!-- container of nav-->
+				 </div>
+			</div>
+		 </div><!-- .navbar navbar-inverse-->
+		 <!--=====================================================Image Carousel=====================================================-->
+		
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+		 <div id="myCarousel" class="carousel slide" >
+		 	<ol class="carousel-indicators">
+		 		<li data-target=".carousel slide" data-slide-to="0" class="active"></li>
+		 		<li data-target=".carousel slide" data-slide-to="1"></li>
+		 		<li data-target=".carousel slide" data-slide-to="2"></li>
+		 		<li data-target=".carousel slide" data-slide-to="3" ></li>
+		 		<li data-target=".carousel slide" data-slide-to="4" ></li>
+		 	</ol>
+		 	<div class="carousel-inner">
+		 		<div class="item active">
+		 			<img class="img" src="images/machodeuan.jpg" alt=""/>
+		 			<div class="container">
+		 				<div class="carousel-caption">
+		 					<h4>It's Me Guys! :)</h4>
+		 				</div>
+		 			</div>
+		 		</div>
+		 		<div class="item">
+		 			<img class="img" src="images/withpapa.jpg" alt="" height="60%"/>
+		 			<div class="container">
+		 				<div class="carousel-caption">
+		 					<h4>With my Papa! :)</h4>
+		 					
+		 				</div>
+		 			</div>
+		 		</div>
+		 		<div class="item">
+		 			<img class="img" src="images/withmama.jpg" alt=""/>
+		 			<div class="container">
+		 				<div class="carousel-caption">
+		 					<h4>With mama! :)</h4>
+		 					
+		 				</div>
+		 			</div>
+		 		</div>
+		 		<div class="item" >
+		 			<img class="img" src="images/withma-pa.jpg"/>
+		 			<div class="container">
+		 				<div class="carousel-caption">
+		 					<h4>With mama and papa! :)</h4>
+		 				</div>
+		 			</div>
+		 		</div>
+		 		<div class="item">
+		 			<img class="img" src="images/chuponbaby.jpg" alt="" />
+		 			<div class="container">
+		 				<div class="carousel-caption">
+		 					<h4>Matulog sa ko ha? :)))</h4>
+		 					
+		 				</div>
+		 			</div>
+		 		</div>
+
+		 	
+		 	</div><!-- carousel inner-->
+		 	<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		 	<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		 	
+		 </div><!-- .carousel slide-->
+		</div><!-- .col-md-12 column-->
+	</div><!-- .row clearfix-->
+
+	<!--==========================font awesome==========================-->
+
+	
+	<br/><br/><br/>
+	<hr/>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-42" >
+					<div class="well" >
+						
+					<a href="https://www.twitter.com"><span class="fa-stack fa-lg pull-right" id="myFontAwesome">
+  					<i class="fa fa-square-o fa-stack-2x "></i>
+  					<i class="fa fa-twitter fa-stack-1x "></i>
+					</span></a>
+
+					<a href="https://facebook.com/banzai03"><span class="fa-stack fa-lg pull-right" id="myFontAwesome">
+  					<i class="fa fa-square-o fa-stack-2x "></i>
+  					<i class="fa fa-facebook fa-stack-1x "></i>
+					</span></a>
+					
+					<a href="https://github.com/cor03rock"><span class="fa-stack fa-lg pull-right" id="myFontAwesome">
+  					<i class="fa fa-square-o fa-stack-2x "></i>
+  					<i class="fa fa-github fa-stack-1x "></i>
+					</span></a>
+
+					</div>
+				</div>
+			</div>
+			
+
+		<!--==================Footer and Modal=====================-->
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					
+					<p id="copyright">Copyright &copy; Coronel.
+						<a href="#myModal" data-toggle="modal" >Terms and Conditions</a>
+					</p> 
+					<div class="modal fade" id="myModal" tabinex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3>Terms and Conditions</h3>
+								</div>
+								<div class="modal-body">
+									<p>text goes here...</p>
+								</div>
+								<div class="modal-footer">
+									<button class="btn btn-primary" type="button" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--=======================Javascripts=====================-->
+		<script src ="js/jquery.min.js"></script>
+				<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src ="js/bootstrap.js"></script>
+		
+
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+		$(document).keydown( function(eventObject) {//Arrow keys for image slides
+     if(eventObject.which==37) {//left arrow
+        $('#myCarousel .left').click();//emulates click on prev button 
+     } else if(eventObject.which==39) {//right arrow
+        $('#myCarousel .right').click();//emulates click on next button
+     }
+} );
+
+		$(document).ready(function () {//carousel move it's own
+    $('.carousel').carousel({
+        interval: 2000
+    });
+ 	$('.carousel').carousel('cycle');
+});
+		</script>
+	</body>
+</html>
