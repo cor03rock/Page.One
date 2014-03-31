@@ -1,0 +1,69 @@
+
+  @charset "UTF-8";
+    .navbar-brand{
+      font-size: 40px;
+      font-family: Sinead, Arial;
+
+    }
+    .pull-left{
+      padding-right:23px; 
+    }
+    body {
+  background: #DCDDDF url(http://maccg.com/wp-content/uploads/2013/08/css-quilt.png);
+  color: #000;
+  font: 14px Arial;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+    
+    .thumbnail{
+      padding-left: 20px;
+      padding-right: 20px;
+
+    }
+    .img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .fa-stack {
+      font-size: 20px;
+      color: white;
+      text-align: right;
+
+    }
+    .well {
+       background-color: #484848;
+       padding-top: 2px;
+       padding-bottom: 2px;     
+    }
+    #copyright{
+      color: white;
+    }
+    #myFontAwesome:hover{
+      background-color: black;
+    }
+    #myphotoHeader{
+      color: #FFFFFF;
+    }
+    .modal {
+    overflow: auto;
+    color: #333;
+    }
+
+    label{
+      padding: 20px,20px,20px,20px;
+      display: inline-block;
+    }
+    .thumbImages{
+padding: 20px,100px,100px,20px;
+
+    }
+    body { padding-top:30px; }
+.form-control { margin-bottom: 10px; }
+    footer{
+      position: relative; 
+      bottom: 0px;
+    }
+  

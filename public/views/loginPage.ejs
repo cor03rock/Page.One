@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>	
+	<head>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link rel="shortcut icon" href="images/thumbnails/deuan.jpg" type="image/jpg">
+		<title>Deuan Blair</title>
+		<link type="text/css" rel="stylesheet" href="css/myStyle.css"/>
+		<link type="text/css" rel="stylesheet" href="css/animation.css"/>
+	</head>
+	<body bgcolor="#686868" >	
+
+		<!--=====================================================Responsive NavBar=====================================================-->
+		<div class ="navbar navbar-inverse">
+		 	<div class="row-fluid">
+			 	<div class="col-md-4">
+				 	<div class="container"> 
+				 		<div class="navbar-header">
+				 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				 				<span class="icon-bar"></span>
+				 				<span class="icon-bar"></span>
+				 				<span class="icon-bar"></span>
+				 				<span class="icon-bar"></span>
+				 			</button>
+				 			<div class="pull-left">
+				 			<a href="/home"><img src="images/thumbnails/deuan.jpg" class="img-circle" alt="Circular Image"></a>
+				 			</div>
+				 			<a href="/home" class="navbar-brand">Deuan Blair</a>
+				 		</div>
+				 		
+				 	</div><!-- container of nav-->
+			 	</div>
+			</div>
+		 </div><!-- .navbar navbar-inverse-->
+
+		<!--======================signIn========================-->
+		<div class=="container" style="display:block;">
+			<div class="col-sm-4 col-sm-offset-4" style="float:none;">
+
+				<h1><span class="fa fa-sign-in"></span> Login</h1>
+
+				<!-- show any messages that come back with authentication -->
+				<% if (message.length > 0) { %>
+					<div class="alert alert-danger"><%= message %></div>
+				<% } %>
+
+				<!-- LOGIN FORM -->
+				<form action="/login" method="post" class="">
+					<div class="form-group">
+						<label>Username</label>
+						<input type="text" class="form-control" id="loginUsername" name="username" placeholder="Enter your username...">
+					</div>
+					<div class="form-group">
+						<label>Password</label>
+						<input type="password" class="form-control" id="loginPassword" name="password" placeholder="Enter your password...">
+					</div>
+
+					<button type="submit" class="btn btn-warning btn-lg" id="loginButton">Login</button>
+				</form>
+
+				<hr>
+
+				<p>Need an account? <a href="/signup">Signup</a></p>
+				<p>Or go <a href="/">home</a>.</p>
+
+			</div>
+		</div>
+		
+	<!--==========================font awesome==========================-->
+	
+		<div class="container" style="display:block;">
+			<div class="row">
+				<div class="col-md-42" >
+					<div class="well" style="height:43px;">
+						
+					<a href="https://www.twitter.com" class="pull-right" style="position:relative;"><span class="fa-stack fa-lg pull-right" id="myFontAwesome">
+  					<i class="fa fa-square-o fa-stack-2x "></i>
+  					<i class="fa fa-twitter fa-stack-1x "></i>
+					</span></a>
+
+					<a href="https://facebook.com" class="pull-right" style="position:relative;"><span class="fa-stack fa-lg pull-right" id="myFontAwesome">
+  					<i class="fa fa-square-o fa-stack-2x "></i>
+  					<i class="fa fa-facebook fa-stack-1x "></i>
+					</span></a>
+					 
+					<a href="https://github.com" class="pull-right" ><span class="fa-stack fa-lg" id="myFontAwesome">
+  					<i class="fa fa-square-o fa-stack-2x "></i>
+  					<i class="fa fa-github fa-stack-1x "></i>
+					</span></a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		<!--==================Footer and Modal=====================-->
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					
+					<p id="copyright">Copyright &copy; Coronel.
+						<a href="#myModal" data-toggle="modal" >Terms and Conditions</a>
+					</p> 
+					<div class="modal fade" id="myModal" tabinex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3>Terms and Conditions</h3>
+								</div>
+								<div class="modal-body">
+									<p>text goes here...</p>
+								</div>
+								<div class="modal-footer">
+									<button class="btn btn-primary" type="button" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--=======================Javascripts=====================-->
+		<script src ="js/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src ="js/bootstrap.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
